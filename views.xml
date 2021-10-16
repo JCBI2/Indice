@@ -1,0 +1,25 @@
+<odoo>
+    <record id="view_tree_indice" model="ir.ui.view">
+        <field name="name">view.tree.indice</field>
+        <field name="model">jc.indice</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="status"/>
+            </tree>
+        </field>
+    </record>
+
+    <search>
+        <field name="name"/>
+        <field name="inventor_id"/>
+    </search>
+
+    <record id="action_view_indice" model="ir.actions.act_window">
+        <field name="name">Asignaciones de clases</field>
+        <field name="res_model">jc.indice</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem id="menu_indice" parent="" action="Indice.action_view_indice"/>
+</odoo>
